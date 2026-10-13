@@ -1,0 +1,72 @@
+{
+  "file": "sample-emails/02-malicious-attachment.eml",
+  "subject": "Overdue invoice INV-20419 - payment required today",
+  "from_addr": "accounts@vendor-billing.test",
+  "from_display": "Accounts Receivable",
+  "reply_to": "",
+  "return_path": "accounts@vendor-billing.test",
+  "to": "finance@example.com",
+  "date": "Fri, 09 Oct 2026 08:15:40 +0000",
+  "message_id": "<a1b2c3d4@vendor-billing.test>",
+  "x_mailer": "",
+  "auth": {
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "pass"
+  },
+  "received_hops": [
+    {
+      "header": "from mail.vendor-billing.test (mail.vendor-billing.test [192.0.2.77]) by mx1.example.com (Postfix) with ESMTPS id 9A8B7C6D5E for <finance@example.com>; Fri, 09 Oct 2026 08:15:42 +0000 (UTC)",
+      "ips": [
+        "192.0.2.77"
+      ]
+    }
+  ],
+  "links": [],
+  "attachments": [
+    {
+      "filename": "INV-20419.pdf.html",
+      "content_type": "text/html",
+      "size": 319,
+      "md5": "47ab476c535a1e62207ae4370cdb80c5",
+      "sha1": "0b200659862dc1bfe26a137149a6d65af47c9bde",
+      "sha256": "88f002a3ef10ecd8d9dbf8cd266ff157188e61034a1db3de0fd558d7db701106",
+      "flags": [
+        "double extension (.pdf.html)",
+        "risky file type (.html)",
+        "contains a password form (credential harvesting)",
+        "form submits data to collect.invoice-share.test"
+      ],
+      "embedded_urls": [
+        "https://collect.invoice-share.test/post.php"
+      ]
+    }
+  ],
+  "iocs": {
+    "ips": [
+      "192.0.2.77"
+    ],
+    "domains": [
+      "collect.invoice-share.test",
+      "vendor-billing.test"
+    ],
+    "urls": [
+      "https://collect.invoice-share.test/post.php"
+    ],
+    "emails": [
+      "accounts@vendor-billing.test"
+    ],
+    "sha256": [
+      "88f002a3ef10ecd8d9dbf8cd266ff157188e61034a1db3de0fd558d7db701106"
+    ]
+  },
+  "red_flags": [
+    "Urgency/pressure language in subject: payment required, overdue",
+    "Attachment INV-20419.pdf.html: double extension (.pdf.html)",
+    "Attachment INV-20419.pdf.html: risky file type (.html)",
+    "Attachment INV-20419.pdf.html: contains a password form (credential harvesting)",
+    "Attachment INV-20419.pdf.html: form submits data to collect.invoice-share.test"
+  ],
+  "score": 90,
+  "verdict": "MALICIOUS"
+}

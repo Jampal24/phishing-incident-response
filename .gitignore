@@ -1,0 +1,38 @@
+# Secrets — never commit these
+.env
+*.env
+secrets/
+*.pem
+*.key
+credentials*
+config.local.*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!example.tfvars
+.terraform.lock.hcl
+crash.log
+
+# Large / risky captures (keep only small, safe samples)
+*.pcapng
+pcaps/private/
+*.evtx
+!sample-logs/*.evtx
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+sample-emails/private/

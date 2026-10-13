@@ -1,0 +1,23 @@
+Return-Path: <it-helpdesk@example.com>
+Received: from mail.example.com (mail.example.com [192.0.2.10])
+	by mx1.example.com (Postfix) with ESMTPS id 1122334455
+	for <j.doe@example.com>; Wed, 07 Oct 2026 16:30:00 +0000 (UTC)
+Authentication-Results: mx1.example.com;
+	spf=pass smtp.mailfrom=example.com;
+	dkim=pass header.d=example.com;
+	dmarc=pass header.from=example.com
+From: "IT Helpdesk" <it-helpdesk@example.com>
+To: j.doe@example.com
+Subject: Scheduled maintenance this Saturday
+Date: Wed, 07 Oct 2026 16:29:58 +0000
+Message-ID: <maint-20261007@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Hi team,
+
+Email will be unavailable on Saturday from 22:00 to 23:00 for scheduled maintenance.
+Details are on the intranet: https://intranet.example.com/it/maintenance
+
+Thanks,
+IT Helpdesk
