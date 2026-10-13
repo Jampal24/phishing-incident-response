@@ -83,6 +83,19 @@ The email itself isn't committed (it's in the git-ignored `sample-emails/private
 
 Tests: 5 passing (`pytest`). Lint: clean.
 
+### Screenshots
+**Verdicts for all samples, including the real email:**
+
+![All sample verdicts](screenshots/02-all-samples-verdicts.png)
+
+**Full report for the real Bright Data email:**
+
+![Real email analysis report](screenshots/01-real-email-report.png)
+
+**Test suite:**
+
+![pytest passing](screenshots/03-tests-passing.png)
+
 **Next:** run it on a real *phishing* email from your spam/junk folder (save as `.eml` into `sample-emails/private/`, which is git-ignored), compare with VirusTotal/URLScan lookups, and add the outcomes here without any personal data.
 
 ## Limitations
